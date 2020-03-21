@@ -36,14 +36,11 @@ const reference_egg_date=
 	second:0
 };
 var time_since=timeSince(reference_egg_date, getTime());
-var counter=initial_egg_num;
-//counter=setInitialCount(initial_egg_num, egg_increment, time_since);
 
 //run functions
 setTime();
 setInterval(setTime, 1000);
 getTime();
-setInterval(incrementCount(),1000);
 
 
 //returns a random integer	
@@ -106,10 +103,12 @@ function setInitialCount(initial_num, increment_amount, time_since)
 }	
 
 //increments counter by a specified number
+//var counter=initial_egg_num;
+var counter=setInitialCount(initial_egg_num, egg_increment, time_since);
+setInterval(incrementCount,1000);
 function incrementCount()
 {
 	counter+=egg_increment;
-	console.log(counter);
 	document.getElementById('counter').innerHTML = counter;
 }	
 
