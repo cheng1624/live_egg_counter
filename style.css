@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+	padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.container_web{
+  height: 100%;
+  width: 100%;
+	align-content: center;
+} 
+
+/* .color-overlay {
+  width: 100%;
+  height: 100%;
+  //background: rgb(230, 230, 230);
+  opacity: .3;
+  position: absolute;
+  margin: -20px;
+}
+   */
+
+.container_main {
+  height: auto;
+	width: 100%;
+  padding: 10px;
+  margin: 2px;
+  background-color: #f1f1f1;
+  align-content: center;
+}
+.container_inner {
+  height: auto;
+	width: auto;
+  border: none;
+  background-color: #f7673b;
+  max-width: 150px;
+  vertical-align: center;
+  padding-top: 12px;
+  padding-left: 10px;
+	padding-bottom: 12px;
+  align-content: center;
+}
+
+h1 {
+  font-family: Helvetica Neue;
+}
