@@ -1,53 +1,88 @@
-html {
-  height: 100%;
-	padding: 0;
+p{
+	line-height: 0pt;
+  padding: 0;
 }
 
-body {
-  font-family: 'Raleway', sans-serif;
-  height: 100%;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
+.container {
+  width: auto;
+  margin-left: 2%;
+  margin-right: 2%;
+  
 }
 
-.container_web{
-  height: 100%;
-  width: 100%;
-	align-content: center;
-} 
-
-/* .color-overlay {
-  width: 100%;
-  height: 100%;
-  //background: rgb(230, 230, 230);
-  opacity: .3;
-  position: absolute;
-  margin: -20px;
+#container1 {
+  margin-top: 2%;
+  margin-bottom: 0%;
 }
-   */
 
-.container_main {
-  height: auto;
-	width: 100%;
-  padding: 10px;
-  margin: 2px;
-  background-color: #f1f1f1;
-  align-content: center;
+#container2 {
+  margin-top: 0%; 
+  margin-bottom: 0%;
 }
-.container_inner {
-  height: auto;
-	width: auto;
-  border: none;
-  background-color: #f7673b;
-  max-width: 150px;
-  vertical-align: center;
-  padding-top: 12px;
-  padding-left: 10px;
-	padding-bottom: 12px;
+
+#container3{
+  display: flex;
+  flex-wrap: wrap;
   align-content: center;
 }
 
-h1 {
+.wrapper {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+#wrapper1 { /* time */
   font-family: Helvetica Neue;
+  font-weight: bold;
+  font-size: 4vw;
+  text-align: right;
+}
+
+#wrapper2 { /* date */
+  font-family: Nunito;
+  font-size: 2vw;
+  font-weight: 300;
+  text-align: right;
+}
+
+#wrapper3 { /*counter */
+  font-family: Helvetica Neue;
+  font-weight: bold;
+  font-size: 8vw;
+  position: relative;
+  text-align: left;
+}
+
+#wrapper4 { /* topic */
+  font-family: Helvetica Neue;
+  font-weight: bold;
+  font-size: 3vw;
+  position: absolute;
+  right: 2%;
+  text-align: right;
+}
+
+#wrapper5 { /* logo */
+  font-family: Helvetica Neue;
+  font-weight: bold;
+  font-size: 8vw;
+}
+
+#counter{
+	line-height: 10vw;
+}
+/* this allows the counter to be above the circle*/
+
+.box{ 
+  position: relative;
+  display: inline-block; /* Make the width of box same as image */
+}
+.box .text{
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -20%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 60%; /* Set the width of the positioned div */
 }
