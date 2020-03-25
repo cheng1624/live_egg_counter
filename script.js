@@ -1,12 +1,4 @@
-//spacebar random generator
-document.addEventListener('keyup', event => 
-	{
-		if (event.code === 'Space') 
-		{
-			window.location.replace('random'+getRandomInt(3)+".html");
-  	}
-	}
-)
+
 
 //returns a random integer	
 function getRandomInt(max) {
@@ -27,6 +19,7 @@ function getTime(){
 	};
 	return date;
 }
+
 
 //returns the number of seconds between two dates in seconds
 function timeSince(reference_time, current_time) {
@@ -56,23 +49,31 @@ function numToString(num) {
 	var str_num; 
 	if (num<1000000){ //if less than a million, no units
 		str_num=String(num);
+		return str_num;
 	}
 	else if (num>=1000000){ 
 		var arr_num=Array.from(String(num), Number);
-		var temp=arr_num[0];
-		arr_num.shift();
-		str_num=temp+'.'+arr_num.join('');
+		var before;
+		var after;
+		var units;
 		
 		if (num<1000000000){ //assigns unit of million
-			str_num=str_num+' million';
+			before=arr_num.slice(0,arr_num.length-6);
+			after=arr_num.slice(arr_num.length-6,arr_num.length);
+			units=' million';
 		}
 		else if (num>=1000000000&&num<1000000000000){ //assigns unit of billion
-		str_num=str_num+' billion';
+			before=arr_num.slice(0,arr_num.length-9);
+			after=arr_num.slice(arr_num.length-9,arr_num.length);
+			units=' billion';
 		}
 		else if (num>=1000000000){ //assigns unit of trillion
-			str_num=str_num + ' trillion';
+			before=arr_num.slice(0,arr_num.length-12);
+			after=arr_num.slice(arr_num.length-12,arr_num.length);
+			units=' trillion';
 		}
 	}
+	str_num=before.join('')+'.'+after.join('')+units;
 	return str_num;
 }
 
